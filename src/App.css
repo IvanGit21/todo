@@ -1,0 +1,162 @@
+.variables {
+    --backgrond-color: #282c34;
+    --accented-color: #4576f9;
+    --text-color: white;
+    --base-offset: 8px;
+    --base-fontSize: 13px;
+    --extended-fontSize: 20px;
+}
+.App {
+    background-color: var(--backgrond-color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.App__container {
+    width: 500px;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 20%;
+    border: 1px solid var(--accented-color);
+    border-radius: var(--base-offset);
+}
+
+.Header {
+    text-align: center;
+    font-size: 75px;
+    font-family: serif;
+    color: var(--accented-color);
+    border-bottom: 1px solid var(--accented-color);
+}
+
+.Content {
+    padding: 0 var(--base-offset);
+}
+
+.Input__container {
+    width: 300px;
+    height: 45px;
+    padding: 0 25px;
+    border: none;
+    font-size: var(--extended-fontSize);
+}
+
+.Content__Input {
+    padding: var(--base-offset) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Content__Input__checkingAll {
+    color: var(--accented-color);
+    cursor: pointer;
+    transform: rotate(90deg);
+    font-size: var(--extended-fontSize);
+    position: absolute;
+    left: 15%;
+}
+
+.Content__Input__checkingAll_selected {
+    color: var(--accented-color);
+}
+
+.Card__container {
+    height: 30px;
+    padding: var(--base-offset);
+    margin-bottom: var(--base-offset);
+    border: 1px solid var(--accented-color);
+    color: var(--text-color);
+    font-size: var(--extended-fontSize);
+    font-family: serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--base-offset);
+}
+
+.Card__container:hover .Card__iconDelete_sizes {
+    display: block;
+}
+
+.Card__iconDelete {
+    width: 14px;
+    height: 14px;
+}
+
+.Card__container_editInput {
+    width: 100%;
+    height: 100%;
+    margin: 0 var(--base-offset);
+    font-size: var(--extended-fontSize);
+}
+
+.Card__iconDelete_sizes {
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+.Card__title {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: inline-flex;
+    align-items: center;
+    margin-left: var(--base-offset);
+}
+
+.Card__container_completed {
+    text-decoration: line-through;
+}
+
+.Content__FilterBar {
+    display: flex;
+    margin-bottom: var(--base-offset);
+}
+
+.FilterBar__Item {
+    color: var(--text-color);
+    margin-right: var(--base-offset);
+    cursor: pointer;
+    padding: 2px 4px;
+}
+
+.FilterBar__Item_selected {
+    outline: 1px solid var(--text-color);
+    border-radius: 4px;
+}
+
+.Content__FilterBar_menu {
+    display: flex;
+}
+
+.Content__FilterBar_balance {
+    color: var(--text-color);
+    margin-right: var(--base-offset);
+    font-size: var(--base-fontSize);
+}
+
+.Content__FilterBar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Content__FilterBar_clear-button {
+    color: var(--text-color);
+    font-size: var(--base-fontSize);
+    text-align: right;
+}
+
+.Content__FilterBar_clear-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.Content__FilterBar_itemWidth {
+    flex-basis: 33%;
+}
